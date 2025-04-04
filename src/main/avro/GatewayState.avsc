@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "GatewayState",
+  "namespace": "com.example.demo.avro",
+  "fields": [
+    {
+      "name": "lastActivityTime",
+      "type": "long"
+    },
+    {
+      "name": "paymentCount",
+      "type": "long"
+    }
+  ]
+}

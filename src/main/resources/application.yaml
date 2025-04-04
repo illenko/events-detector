@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: demo
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        schema.registry.url: http://localhost:8081
+
+server:
+  port: 8080
+
+kafka:
+  properties:
+    acks: 'all'
+    application.id: 'demo'
+    auto.offset.reset: 'earliest'
+    avro.remove.java.properties: true
+    bootstrap.servers: 'localhost:9092'
+    client.id: 'demo'
+    schema.registry.url: 'http://localhost:8081'
+    state.dir: '/tmp/state'
+    default.deserialization.exception.handler: 'com.michelin.kstreamplify.error.DlqDeserializationExceptionHandler'
+    default.production.exception.handler: 'com.michelin.kstreamplify.error.DlqProductionExceptionHandler'
+    application.server.var.name: 'localhost'
+    default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+
