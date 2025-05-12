@@ -10,6 +10,18 @@
     {
       "name": "paymentCount",
       "type": "long"
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    },
+    {
+      "name": "operation",
+      "type": "string"
+    },
+    {
+      "name": "hourlyPaymentCount",
+      "type": "long"
     }
   ]
 }
