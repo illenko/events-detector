@@ -10,6 +10,14 @@
     {
       "name": "gateway",
       "type": "string"
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    },
+    {
+      "name": "operation",
+      "type": "string"
     }
   ]
 }
